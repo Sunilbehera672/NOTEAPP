@@ -2,7 +2,7 @@
 
     export async function connectToDb(){
         try {
-            await mongoose.connect( "mongodb://127.0.0.1:27017/NoteApp");
+            await mongoose.connect(process.env.MONGO_URI);
             
         } catch (error) {
             console.log(error)
